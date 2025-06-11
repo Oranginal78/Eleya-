@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BasePage from './BasePage';
 import { CpuChipIcon, LightBulbIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
@@ -19,12 +20,18 @@ const EleyaTwinPage = () => {
                             Revolutionary AI-powered digital twin technology that creates virtual representations of your business processes for advanced analytics and optimization.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
+                            <Link
+                                to="/demo"
+                                className="inline-block bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+                            >
                                 Get Started
-                            </button>
-                            <button className="border border-[#194471]/20 hover:border-[#194471]/50 text-gray-600 hover:text-[#194471] px-8 py-4 rounded-lg font-display font-medium transition-all duration-200">
+                            </Link>
+                            <Link
+                                to="/contact"
+                                className="inline-block border border-[#194471]/20 hover:border-[#194471]/50 text-gray-600 hover:text-[#194471] px-8 py-4 rounded-lg font-display font-medium transition-all duration-200"
+                            >
                                 Learn More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

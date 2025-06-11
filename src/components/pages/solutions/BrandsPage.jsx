@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BasePage from '../BasePage';
 import { ArrowTrendingUpIcon, CursorArrowRaysIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
@@ -70,9 +71,12 @@ const BrandsPage = () => {
                     </div>
 
                     <div className="text-center mt-16">
-                        <button className="bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
+                        <Link
+                            to="/demo"
+                            className="inline-block bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+                        >
                             Request Demo
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>

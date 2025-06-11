@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import PlatformPage from './components/pages/PlatformPage';
 import EleyaTwinPage from './components/pages/EleyaTwinPage';
@@ -19,6 +19,31 @@ import SegmentationUAPage from './components/pages/solutions/SegmentationUAPage'
 import ClaimTestingPage from './components/pages/solutions/ClaimTestingPage';
 import OpinionPage from './components/pages/solutions/OpinionPage';
 import BrandPerceptionPage from './components/pages/solutions/BrandPerceptionPage';
+
+// Placeholder components for new routes
+const BlogArticlePage = () => (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Blog Article Coming Soon</h1>
+            <p className="text-gray-600 mb-6">This article is under development and will be available soon.</p>
+            <Link to="/blog" className="bg-[#194471] text-white px-6 py-3 rounded-lg hover:bg-[#194471]/90 transition-colors">
+                Back to Blog
+            </Link>
+        </div>
+    </div>
+);
+
+const FranceGPTExperiencePage = () => (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">FranceGPT Experience Coming Soon</h1>
+            <p className="text-gray-600 mb-6">The interactive FranceGPT experience is under development and will be available soon.</p>
+            <Link to="/francegpt" className="bg-[#194471] text-white px-6 py-3 rounded-lg hover:bg-[#194471]/90 transition-colors">
+                Back to FranceGPT
+            </Link>
+        </div>
+    </div>
+);
 
 // Component to scroll to top on each route change
 function ScrollToTop() {
@@ -41,7 +66,9 @@ function App() {
                     <Route path="/platform" element={<PlatformPage />} />
                     <Route path="/eleyatwin" element={<EleyaTwinPage />} />
                     <Route path="/francegpt" element={<FranceGPTPage />} />
+                    <Route path="/francegpt/experience" element={<FranceGPTExperiencePage />} />
                     <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/blog/:slug" element={<BlogArticlePage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/demo" element={<DemoPage />} />
                     <Route path="/mentions-legales" element={<MentionsLegalesPage />} />

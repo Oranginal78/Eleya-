@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -58,12 +59,12 @@ const HeroSection = () => {
                     {/* CTA Button */}
                     <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
                         }`}>
-                        <a
-                            href="/demo"
+                        <Link
+                            to="/demo"
                             className="inline-flex items-center justify-center px-8 py-4 bg-[#194471] hover:bg-[#194471]/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg font-display"
                         >
                             Request a demo
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

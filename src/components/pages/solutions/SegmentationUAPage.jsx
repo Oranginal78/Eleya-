@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BasePage from '../BasePage';
 
 const SegmentationUAPage = () => {
@@ -21,9 +22,12 @@ const SegmentationUAPage = () => {
                             Understand hard-to-reach audiences better with advanced segmentation and usage & attitude analysis.
                         </p>
                         <div className="mt-8">
-                            <button className="bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
+                            <Link
+                                to="/demo"
+                                className="inline-block bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+                            >
                                 Get Started
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

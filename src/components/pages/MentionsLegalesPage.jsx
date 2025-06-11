@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BasePage from './BasePage';
 
 const MentionsLegalesPage = () => {
@@ -110,9 +111,9 @@ const MentionsLegalesPage = () => {
                                     </p>
                                     <p>
                                         For more information, consult our
-                                        <a href="/privacy-policy" className="text-[#194471] hover:text-[#194471]/80 underline ml-1">
+                                        <Link to="/privacy-policy" className="text-[#194471] hover:text-[#194471]/80 underline ml-1">
                                             Privacy Policy
-                                        </a>.
+                                        </Link>.
                                     </p>
                                 </div>
                             </div>

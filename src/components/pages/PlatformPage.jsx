@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import BasePage from './BasePage';
 import { CheckIcon, ChartBarIcon, CpuChipIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 
@@ -57,12 +58,18 @@ const PlatformPage = () => {
 
                         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <button className="bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
+                                <Link
+                                    to="/contact"
+                                    className="inline-block bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+                                >
                                     Contact us
-                                </button>
-                                <button className="border border-[#194471]/20 hover:border-[#194471]/50 text-gray-600 hover:text-[#194471] px-8 py-4 rounded-lg font-display font-medium transition-all duration-200">
+                                </Link>
+                                <Link
+                                    to="/contact"
+                                    className="inline-block border border-[#194471]/20 hover:border-[#194471]/50 text-gray-600 hover:text-[#194471] px-8 py-4 rounded-lg font-display font-medium transition-all duration-200"
+                                >
                                     What's feasible?
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -124,9 +131,12 @@ const PlatformPage = () => {
                     </div>
 
                     <div className="text-center">
-                        <button className="bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
+                        <Link
+                            to="/demo"
+                            className="inline-block bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+                        >
                             Get Started
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -221,12 +231,18 @@ const PlatformPage = () => {
                             Join thousands of businesses already using our platform to make data-driven decisions.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-white text-[#194471] hover:bg-gray-100 px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
+                            <Link
+                                to="/demo"
+                                className="inline-block bg-white text-[#194471] hover:bg-gray-100 px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+                            >
                                 Request a Demo
-                            </button>
-                            <button className="border border-white/30 hover:border-white/60 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-display font-medium transition-all duration-200">
+                            </Link>
+                            <Link
+                                to="/contact"
+                                className="inline-block border border-white/30 hover:border-white/60 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-display font-medium transition-all duration-200"
+                            >
                                 Contact us
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

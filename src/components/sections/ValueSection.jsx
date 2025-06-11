@@ -313,24 +313,27 @@ const ValueSection = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Process Diagram */}
                 <div className="max-w-4xl md:max-w-6xl mx-auto">
-                    <div className="relative grid grid-cols-3 grid-rows-3 gap-4 md:gap-8 lg:gap-12 items-center justify-items-center min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
-                        {/* Connection Lines */}
-                        <ConnectionLines />
+                    {/* Box container around the diagram */}
+                    <div className="bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-gray-200/60 shadow-lg p-6 md:p-8 lg:p-12">
+                        <div className="relative grid grid-cols-3 grid-rows-3 gap-4 md:gap-8 lg:gap-12 items-center justify-items-center min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
+                            {/* Connection Lines */}
+                            <ConnectionLines />
 
-                        {/* Central Hub */}
-                        <CentralHub delay={200} />
+                            {/* Central Hub */}
+                            <CentralHub delay={200} />
 
-                        {/* Process Steps */}
-                        {processSteps.map((step, index) => (
-                            <ProcessStep
-                                key={index}
-                                icon={step.icon}
-                                title={step.title}
-                                description={step.description}
-                                position={step.position}
-                                delay={300 + index * 150}
-                            />
-                        ))}
+                            {/* Process Steps */}
+                            {processSteps.map((step, index) => (
+                                <ProcessStep
+                                    key={index}
+                                    icon={step.icon}
+                                    title={step.title}
+                                    description={step.description}
+                                    position={step.position}
+                                    delay={300 + index * 150}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

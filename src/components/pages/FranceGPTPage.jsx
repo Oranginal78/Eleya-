@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import BasePage from './BasePage';
 import { UsersIcon, ChatBubbleLeftRightIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import { SparklesIcon } from '@heroicons/react/24/solid';
@@ -47,13 +48,13 @@ const FranceGPTPage = () => {
 
                         {/* CTA Button */}
                         <div className="flex justify-center">
-                            <a
-                                href="/francegpt/experience"
+                            <Link
+                                to="/francegpt/experience"
                                 className="inline-flex items-center gap-3 bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                             >
                                 Try FranceGPT
                                 <ArrowRightIcon className="w-5 h-5" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -165,13 +166,13 @@ const FranceGPTPage = () => {
                         <p className="text-xl text-white/90 mb-8 font-sans">
                             Start your journey into the fascinating world of French population simulation.
                         </p>
-                        <a
-                            href="/francegpt/experience"
+                        <Link
+                            to="/francegpt/experience"
                             className="inline-flex items-center gap-3 bg-white text-[#194471] px-8 py-4 rounded-lg font-display font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg"
                         >
                             Try FranceGPT Now
                             <ArrowRightIcon className="w-5 h-5" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
