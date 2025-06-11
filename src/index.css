@@ -68,7 +68,7 @@ body {
     width: 100%;
 }
 
-/* Custom Animations */
+/* Custom Animations for Scrolling Questions */
 @keyframes scroll-right {
     0% {
         transform: translateX(-100%);
@@ -89,12 +89,56 @@ body {
     }
 }
 
+@keyframes scroll-right-slow {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 .animate-scroll-right {
-    animation: scroll-right 30s linear infinite;
+    animation: scroll-right 40s linear infinite;
 }
 
 .animate-scroll-left {
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 35s linear infinite;
+}
+
+.animate-scroll-right-slow {
+    animation: scroll-right-slow 45s linear infinite;
+}
+
+/* FranceGPT Experience Scrolling Animation */
+@keyframes francegpt-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-francegpt-scroll {
+    animation: francegpt-scroll 30s linear infinite;
+}
+
+/* ValueSection line animation */
+@keyframes fadeInLine {
+    from {
+        opacity: 0;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        opacity: 0.8;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
 }
 
 /* Smooth transitions for all interactive elements */

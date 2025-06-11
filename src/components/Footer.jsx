@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-    FacebookIcon,
-    InstagramIcon,
-    TwitterIcon,
     LinkedinIcon
 } from 'lucide-react';
 import eleyaLogo from '../assets/images/logo11.png';
@@ -15,7 +12,7 @@ const Footer = () => {
     ];
 
     const solutionsPages = [
-        { name: 'Segmentation & U&A', href: '/solutions/segmentation-ua' },
+        { name: 'Segmentation and U&A', href: '/solutions/segmentation-ua' },
         { name: 'Claim Testing', href: '/solutions/claim-testing' },
         { name: 'Opinion', href: '/solutions/opinion' },
         { name: 'Brand Perception', href: '/solutions/brand-perception' }
@@ -27,7 +24,7 @@ const Footer = () => {
 
     const legalPages = [
         { name: 'Privacy Policy', href: '/privacy-policy' },
-        { name: 'Terms of Use', href: '/terms-of-use' },
+        { name: 'Terms of Service', href: '/terms-of-use' },
         { name: 'Cookies', href: '/cookies' }
     ];
 
@@ -63,25 +60,16 @@ const Footer = () => {
                                 </Link>
                             </div>
 
-                            {/* Social Icons */}
+                            {/* Social Icons - Only LinkedIn */}
                             <div className="flex space-x-3">
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-700 hover:bg-[#194471] rounded-lg flex items-center justify-center transition-colors duration-200">
-                                    <FacebookIcon className="w-4 h-4 text-gray-300 hover:text-white" />
-                                </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-700 hover:bg-[#194471] rounded-lg flex items-center justify-center transition-colors duration-200">
-                                    <InstagramIcon className="w-4 h-4 text-gray-300 hover:text-white" />
-                                </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-700 hover:bg-[#194471] rounded-lg flex items-center justify-center transition-colors duration-200">
-                                    <TwitterIcon className="w-4 h-4 text-gray-300 hover:text-white" />
-                                </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-700 hover:bg-[#194471] rounded-lg flex items-center justify-center transition-colors duration-200">
+                                <a href="https://www.linkedin.com/company/eleya-eu/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-700 hover:bg-[#194471] rounded-lg flex items-center justify-center transition-colors duration-200">
                                     <LinkedinIcon className="w-4 h-4 text-gray-300 hover:text-white" />
                                 </a>
                             </div>
                         </div>
 
-                        {/* Pages organisées par catégories */}
-                        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+                        {/* Pages organized by categories */}
+                        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-5 gap-8">
                             {/* Platform */}
                             <div>
                                 <h3 className="text-white font-display font-medium mb-3">Platform</h3>
@@ -116,7 +104,10 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            {/* Blog & Contact */}
+                            {/* Empty column for spacing */}
+                            <div></div>
+
+                            {/* Blog & Contact - shifted right */}
                             <div>
                                 <h3 className="text-white font-display font-medium mb-3">Blog</h3>
                                 <ul className="space-y-2">

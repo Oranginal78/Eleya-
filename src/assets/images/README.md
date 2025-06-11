@@ -1,10 +1,10 @@
-# Logo Eleya
+# Images
 
-Veuillez placer votre logo Eleya (fichier PNG) dans ce dossier avec le nom : **eleya-logo.png**
+Please place your Eleya logo (PNG file) in this folder with the name: **eleya-logo.png**
 
-Le logo sera automatiquement utilisé dans la navbar du site.
+The logo will be automatically used in the site's navbar.
 
-## Spécifications recommandées :
-- Format : PNG avec transparence
-- Taille : 32x32px ou 64x64px minimum
-- Nom du fichier : `eleya-logo.png` 
+## Requirements:
+- Format: PNG with transparency
+- Recommended size: 200x50px or similar proportions  
+- File name: `eleya-logo.png` 

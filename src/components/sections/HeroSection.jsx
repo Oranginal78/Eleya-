@@ -41,7 +41,7 @@ const HeroSection = () => {
                         }`}>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-gray-800 leading-tight">
                             Tailored AI panels. Quality data.{' '}
-                            <span className="text-primary-500 relative">
+                            <span className="text-[#194471] relative">
                                 Zero wait.
                             </span>
                         </h1>

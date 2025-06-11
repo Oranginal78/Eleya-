@@ -5,7 +5,12 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline
 const ContactPage = () => {
     return (
         <BasePage>
-            <section className="py-20 bg-gradient-to-br from-primary-50/30 to-primary-100/30">
+            {/* Hero Section - Fond harmonisé avec transition fluide */}
+            <section className="py-20" style={{
+                background: 'linear-gradient(180deg, rgba(25, 68, 113, 0.06) 0%, rgba(37, 99, 235, 0.04) 50%, rgba(255, 255, 255, 0.4) 100%)',
+                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.08) 1px, transparent 1px)',
+                backgroundSize: '24px 24px'
+            }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-4xl mx-auto">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-gray-800 leading-tight mb-6">
@@ -18,7 +23,12 @@ const ContactPage = () => {
                 </div>
             </section>
 
-            <section className="py-20 bg-white">
+            {/* Contact Form Section - Transition fluide vers le blanc */}
+            <section className="py-20" style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 100%)',
+                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.02) 1px, transparent 1px)',
+                backgroundSize: '20px 20px'
+            }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         {/* Contact Form */}
@@ -34,7 +44,7 @@ const ContactPage = () => {
                                         </label>
                                         <input
                                             type="text"
-                                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-sans"
+                                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                             placeholder="John"
                                         />
                                     </div>
@@ -44,7 +54,7 @@ const ContactPage = () => {
                                         </label>
                                         <input
                                             type="text"
-                                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-sans"
+                                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                             placeholder="Doe"
                                         />
                                     </div>
@@ -55,7 +65,7 @@ const ContactPage = () => {
                                     </label>
                                     <input
                                         type="email"
-                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-sans"
+                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                         placeholder="john@example.com"
                                     />
                                 </div>
@@ -65,7 +75,7 @@ const ContactPage = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-sans"
+                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                         placeholder="Company Inc."
                                     />
                                 </div>
@@ -75,13 +85,13 @@ const ContactPage = () => {
                                     </label>
                                     <textarea
                                         rows={6}
-                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-sans"
+                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                         placeholder="Tell us about your project..."
                                     ></textarea>
                                 </div>
                                 <button
                                     type="submit"
-                                    className="w-full bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+                                    className="w-full bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md"
                                 >
                                     Send Message
                                 </button>
@@ -95,8 +105,8 @@ const ContactPage = () => {
                             </h2>
                             <div className="space-y-8">
                                 <div className="flex items-start">
-                                    <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mr-4">
-                                        <EnvelopeIcon className="w-6 h-6 text-primary-500" />
+                                    <div className="w-12 h-12 bg-[#194471]/10 rounded-lg flex items-center justify-center mr-4">
+                                        <EnvelopeIcon className="w-6 h-6 text-[#194471]" />
                                     </div>
                                     <div>
                                         <h3 className="font-display font-semibold text-gray-800 mb-2">Email</h3>
@@ -105,8 +115,8 @@ const ContactPage = () => {
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mr-4">
-                                        <PhoneIcon className="w-6 h-6 text-primary-500" />
+                                    <div className="w-12 h-12 bg-[#194471]/10 rounded-lg flex items-center justify-center mr-4">
+                                        <PhoneIcon className="w-6 h-6 text-[#194471]" />
                                     </div>
                                     <div>
                                         <h3 className="font-display font-semibold text-gray-800 mb-2">Phone</h3>
@@ -115,8 +125,8 @@ const ContactPage = () => {
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mr-4">
-                                        <MapPinIcon className="w-6 h-6 text-primary-500" />
+                                    <div className="w-12 h-12 bg-[#194471]/10 rounded-lg flex items-center justify-center mr-4">
+                                        <MapPinIcon className="w-6 h-6 text-[#194471]" />
                                     </div>
                                     <div>
                                         <h3 className="font-display font-semibold text-gray-800 mb-2">Office</h3>

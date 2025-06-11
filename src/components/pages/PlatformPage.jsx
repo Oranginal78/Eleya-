@@ -38,11 +38,11 @@ const PlatformPage = () => {
 
     return (
         <BasePage>
-            {/* Hero Section */}
+            {/* Hero Section - Fond principal harmonisé avec transition */}
             <section className="py-20" style={{
-                background: 'linear-gradient(135deg, rgba(254, 200, 162, 0.1) 0%, rgba(254, 215, 170, 0.1) 100%)',
-                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.08) 1px, transparent 1px)',
-                backgroundSize: '22px 22px'
+                background: 'linear-gradient(180deg, rgba(25, 68, 113, 0.06) 0%, rgba(37, 99, 235, 0.04) 50%, rgba(250, 251, 252, 0.4) 100%)',
+                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.08) 1px, transparent 1px)',
+                backgroundSize: '24px 24px'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-4xl mx-auto">
@@ -69,12 +69,11 @@ const PlatformPage = () => {
                 </div>
             </section>
 
-            {/* Partners Section */}
+            {/* Partners Section - Transition fluide sans bordure */}
             <section className="py-16" style={{
-                backgroundColor: '#FFFBF7',
-                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.05) 1px, transparent 1px)',
-                backgroundSize: '22px 22px',
-                borderBottom: '1px solid rgba(254, 200, 162, 0.2)'
+                background: 'linear-gradient(180deg, rgba(250, 251, 252, 0.4) 0%, rgba(250, 251, 252, 1) 40%, rgba(250, 251, 252, 1) 60%, rgba(25, 68, 113, 0.02) 100%)',
+                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.03) 1px, transparent 1px)',
+                backgroundSize: '20px 20px'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <p className="text-center text-[#194471]/60 text-sm font-medium uppercase tracking-wide mb-8 font-sans">
@@ -92,10 +91,10 @@ const PlatformPage = () => {
                 </div>
             </section>
 
-            {/* Main Features Section */}
+            {/* Main Features Section - Gradient continu */}
             <section className="py-20" style={{
-                backgroundColor: '#FFF4E6',
-                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.1) 1px, transparent 1px)',
+                background: 'linear-gradient(180deg, rgba(25, 68, 113, 0.02) 0%, rgba(25, 68, 113, 0.04) 40%, rgba(25, 68, 113, 0.04) 60%, rgba(255, 255, 255, 0.4) 100%)',
+                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.06) 1px, transparent 1px)',
                 backgroundSize: '22px 22px'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,11 +131,11 @@ const PlatformPage = () => {
                 </div>
             </section>
 
-            {/* Trust Section */}
+            {/* Trust Section - Transition fluide vers le blanc */}
             <section className="py-20" style={{
-                backgroundColor: '#FFFBF7',
-                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.08) 1px, transparent 1px)',
-                backgroundSize: '22px 22px'
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(25, 68, 113, 0.02) 100%)',
+                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.02) 1px, transparent 1px)',
+                backgroundSize: '20px 20px'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
@@ -209,25 +208,23 @@ const PlatformPage = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
+            {/* CTA Section - Transition finale avec gradient de marque */}
             <section className="py-20" style={{
-                backgroundColor: '#FFF4E6',
-                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.1) 1px, transparent 1px)',
-                backgroundSize: '22px 22px'
+                background: 'linear-gradient(180deg, rgba(25, 68, 113, 0.02) 0%, rgba(25, 68, 113, 0.8) 30%, rgba(25, 68, 113, 1) 70%, rgba(37, 99, 235, 1) 100%)'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h2 className="text-3xl sm:text-4xl font-display font-semibold text-gray-800 mb-6">
+                        <h2 className="text-3xl sm:text-4xl font-display font-semibold text-white mb-6">
                             Ready to transform your analytics with AI?
                         </h2>
-                        <p className="text-lg text-gray-500 mb-8 font-sans">
+                        <p className="text-lg text-white/90 mb-8 font-sans">
                             Join thousands of businesses already using our platform to make data-driven decisions.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
+                            <button className="bg-white text-[#194471] hover:bg-gray-100 px-8 py-4 rounded-lg font-display font-medium transition-all duration-200 shadow-sm hover:shadow-md">
                                 Request a Demo
                             </button>
-                            <button className="border border-[#194471]/20 hover:border-[#194471]/50 text-gray-600 hover:text-[#194471] px-8 py-4 rounded-lg font-display font-medium transition-all duration-200">
+                            <button className="border border-white/30 hover:border-white/60 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-display font-medium transition-all duration-200">
                                 Contact us
                             </button>
                         </div>

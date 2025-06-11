@@ -58,26 +58,6 @@ const CounterCard = ({ number, suffix, title, description, delay = 0, noAnimatio
 };
 
 const FiguresSection = () => {
-    const [titleVisible, setTitleVisible] = useState(false);
-    const titleRef = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setTitleVisible(true);
-                }
-            },
-            { threshold: 0.1 }
-        );
-
-        if (titleRef.current) {
-            observer.observe(titleRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
-
     const figures = [
         {
             number: 80,
@@ -100,39 +80,27 @@ const FiguresSection = () => {
     ];
 
     return (
-        <section className="relative py-20" style={{
-            backgroundColor: 'transparent'
+        <section className="py-16 md:py-20" style={{
+            backgroundColor: '#FFFBF7',
+            backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.04) 1px, transparent 1px)',
+            backgroundSize: '16px 16px md:24px md:24px'
         }}>
-            {/* Dégradé de transition du haut */}
-            <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white/40 via-white/60 to-white/75 z-10"></div>
-
-            {/* Contenu principal avec fond semi-transparent */}
-            <div className="relative z-20" style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.75)',
-                backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.08) 1px, transparent 1px)',
-                backgroundSize: '20px 20px',
-                margin: '20px 0'
-            }}>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    {/* Figures Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                        {figures.map((figure, index) => (
-                            <CounterCard
-                                key={index}
-                                number={figure.number}
-                                suffix={figure.suffix}
-                                title={figure.title}
-                                description={figure.description}
-                                delay={index * 200}
-                                noAnimation={figure.title === 'Results in real-time'}
-                            />
-                        ))}
-                    </div>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Figures Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                    {figures.map((figure, index) => (
+                        <CounterCard
+                            key={index}
+                            number={figure.number}
+                            suffix={figure.suffix}
+                            title={figure.title}
+                            description={figure.description}
+                            delay={index * 200}
+                            noAnimation={figure.title === 'Results in real-time'}
+                        />
+                    ))}
                 </div>
             </div>
-
-            {/* Dégradé de transition du bas */}
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/40 via-white/60 to-white/75 z-10"></div>
         </section>
     );
 };

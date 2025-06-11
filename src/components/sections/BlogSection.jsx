@@ -3,6 +3,8 @@ import { CalendarIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const BlogCard = ({ title, excerpt, date, readTime, image, delay = 0 }) => {
     const [isVisible, setIsVisible] = useState(false);
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
     const cardRef = useRef(null);
 
     useEffect(() => {
@@ -22,21 +24,41 @@ const BlogCard = ({ title, excerpt, date, readTime, image, delay = 0 }) => {
         return () => observer.disconnect();
     }, [delay]);
 
+    // Précharger l'image
+    useEffect(() => {
+        if (image) {
+            console.log('Tentative de chargement de l\'image:', image);
+            const img = new Image();
+            img.onload = () => {
+                console.log('Image chargée avec succès:', image);
+                setImageLoaded(true);
+            };
+            img.onerror = (error) => {
+                console.error('Erreur de chargement de l\'image:', image, error);
+                setImageError(true);
+            };
+            img.src = image;
+        }
+    }, [image]);
+
     return (
         <article
             ref={cardRef}
-            className={`group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            className={`group relative rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
+            style={{ aspectRatio: '3/4' }}
         >
-            <div className="aspect-video bg-gradient-to-br from-primary-50 to-primary-100 relative overflow-hidden">
-                {image ? (
-                    <img
-                        src={image}
-                        alt={title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                ) : (
-                    <div className="w-full h-full flex items-center justify-center">
+            {/* Image de fond */}
+            <div
+                className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+                style={{
+                    backgroundImage: (image && imageLoaded && !imageError) ? `url(${image})` : 'none',
+                    backgroundColor: '#f3f4f6'
+                }}
+            >
+                {/* Fallback icon si pas d'image ou erreur */}
+                {(!image || !imageLoaded || imageError) && (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
                         <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center">
                             <CalendarIcon className="w-8 h-8 text-primary-500" />
                         </div>
@@ -44,27 +66,34 @@ const BlogCard = ({ title, excerpt, date, readTime, image, delay = 0 }) => {
                 )}
             </div>
 
-            <div className="p-6">
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-3 font-sans">
-                    <span className="flex items-center gap-1">
-                        <CalendarIcon className="w-4 h-4" />
-                        {date}
-                    </span>
-                    <span>{readTime} min read</span>
+            {/* Overlay et contenu */}
+            <div className="relative h-full flex flex-col justify-end">
+                {/* Overlay blanc semi-transparent */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-transparent"></div>
+
+                {/* Contenu textuel */}
+                <div className="relative p-6 space-y-3">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 font-sans">
+                        <span className="flex items-center gap-1">
+                            <CalendarIcon className="w-4 h-4" />
+                            {date}
+                        </span>
+                        <span>{readTime} min read</span>
+                    </div>
+
+                    <h3 className="text-xl font-display font-semibold text-gray-900 group-hover:text-[#194471] transition-colors duration-200">
+                        {title}
+                    </h3>
+
+                    <p className="text-gray-600 line-clamp-3 font-sans">
+                        {excerpt}
+                    </p>
+
+                    <button className="flex items-center gap-2 text-[#194471] font-medium hover:gap-3 transition-all duration-200 font-display">
+                        Read more
+                        <ArrowRightIcon className="w-4 h-4" />
+                    </button>
                 </div>
-
-                <h3 className="text-xl font-display font-semibold text-gray-800 mb-3 group-hover:text-primary-500 transition-colors duration-200">
-                    {title}
-                </h3>
-
-                <p className="text-gray-500 mb-4 line-clamp-3 font-sans">
-                    {excerpt}
-                </p>
-
-                <button className="flex items-center gap-2 text-primary-500 font-medium hover:gap-3 transition-all duration-200 font-display">
-                    Read more
-                    <ArrowRightIcon className="w-4 h-4" />
-                </button>
             </div>
         </article>
     );
@@ -97,21 +126,21 @@ const BlogSection = () => {
             excerpt: "Discover how artificial intelligence is revolutionizing the way businesses analyze data and make decisions. Learn about the latest trends and technologies shaping the analytics landscape.",
             date: "Dec 15, 2024",
             readTime: 5,
-            image: null
+            image: "/images/ai-analytics.jpg"
         },
         {
             title: "10 Essential Metrics Every Business Should Track",
             excerpt: "From conversion rates to customer lifetime value, explore the key performance indicators that can drive your business growth and help you make informed decisions.",
             date: "Dec 12, 2024",
             readTime: 7,
-            image: null
+            image: "/images/metrics.jpg"
         },
         {
             title: "How to Optimize Your Website Performance",
             excerpt: "Learn practical strategies to improve your website's speed, user experience, and search engine rankings. Get actionable tips from industry experts.",
             date: "Dec 10, 2024",
             readTime: 6,
-            image: null
+            image: "/images/performance.jpg"
         }
     ];
 

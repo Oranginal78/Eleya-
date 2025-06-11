@@ -20,7 +20,7 @@ import ClaimTestingPage from './components/pages/solutions/ClaimTestingPage';
 import OpinionPage from './components/pages/solutions/OpinionPage';
 import BrandPerceptionPage from './components/pages/solutions/BrandPerceptionPage';
 
-// Composant pour scroll vers le haut à chaque changement de route
+// Component to scroll to top on each route change
 function ScrollToTop() {
     const { pathname } = useLocation();
 

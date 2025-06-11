@@ -16,15 +16,15 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Fonction pour remonter en haut de la page
+    // Function to scroll to top of the page
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setIsMobileMenuOpen(false);
     };
 
     const platformItems = [
-        { name: 'EleyaTwin', href: '/eleyatwin', description: 'Notre plateforme de jumeaux numériques' },
-        { name: 'FranceGPT', href: '/francegpt', description: 'IA conversationnelle française' }
+        { name: 'EleyaTwin', href: '/eleyatwin', description: 'Our digital twins platform' },
+        { name: 'FranceGPT', href: '/francegpt', description: 'French conversational AI' }
     ];
 
     const solutions = {
@@ -37,7 +37,7 @@ const Navbar = () => {
     };
 
     const otherPages = [
-        { name: 'Blog', href: '/blog', description: 'Insights et actualités' }
+        { name: 'Blog', href: '/blog', description: 'Insights and news' }
     ];
 
     return (
@@ -227,7 +227,7 @@ const Navbar = () => {
 
                                 {/* Other Pages mobile */}
                                 <div className="border-b border-gray-100 pb-3">
-                                    <h3 className="text-xs font-semibold text-gray-800 mb-2">Autres Pages</h3>
+                                    <h3 className="text-xs font-semibold text-gray-800 mb-2">Other Pages</h3>
                                     {otherPages.map((page) => (
                                         <Link key={page.name} to={page.href} className="block text-sm text-gray-600 hover:text-[#194471] py-1.5 pl-3 transition-colors" onClick={scrollToTop}>
                                             {page.name}
