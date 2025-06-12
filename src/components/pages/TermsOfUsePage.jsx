@@ -168,12 +168,6 @@ const TermsOfUsePage = () => {
                                     12. Contact Us
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-2">
-                                    <p>
-                                        If you have any questions about these Terms, please contact us at:
-                                    </p>
-                                    <p><strong>Eleya</strong></p>
-                                    <p>16 rue Sarrette</p>
-                                    <p>Paris, 75014</p>
                                     <p>contact@eleya.eu</p>
                                 </div>
                             </div>

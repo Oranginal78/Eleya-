@@ -3,34 +3,34 @@ import React from 'react';
 const ScrollingQuestionsSection = () => {
     const questions = {
         row1: [
-            "Which areas of my website are underperforming?",
-            "How can I improve user engagement?",
-            "What's causing my page load speed to drop?",
-            "Why isn't my traffic converting?",
-            "What needs to be optimized first?",
-            "How can I detach this problem?",
-            "Where am I losing potential leads in my funnel?",
-            "What factors are affecting my bounce rate?"
+            "How often do you use meal kit delivery services?",
+            "How appealing is this claim?",
+            "When you think of luxury skincare brands, which names come to mind first?",
+            "Which brands of electric toothbrushes have you used in the past 3 months?",
+            "How likely are you to repurchase Dyson vacuum cleaners?",
+            "Which claim conveys the most innovative message?",
+            "How unique is this statement?",
+            "On a 0-10 scale, how likely are you to recommend Spotify Premium to a friend?"
         ],
         row2: [
-            "How can I detach this problem?",
-            "Why isn't my traffic converting?",
-            "What needs to be optimized first?",
-            "Where am I losing potential leads in my funnel?",
-            "Which areas of my website are underperforming?",
-            "How can I improve user engagement?",
-            "What's causing my page load speed to drop?",
-            "What factors are affecting my bounce rate?"
+            "If available today at $299, how likely would you be to buy...?",
+            "What is your biggest frustration with mobile banking apps?",
+            "How satisfied are you with your Amazon Prime membership?",
+            "How appealing is this claim?",
+            "Which of these sports drink brands are you aware of?",
+            "What are the top 3 factors you consider when choosing a project management software?",
+            "How well does innovative describe Tesla electric vehicles?",
+            "How would you describe this product concept...?"
         ],
         row3: [
-            "What factors are affecting my bounce rate?",
+            "Compared to Samsung, how would you rate Apple smartphones on battery life?",
             "Where am I losing potential leads in my funnel?",
-            "Which areas of my website are underperforming?",
-            "How can I improve user engagement?",
-            "What's causing my page load speed to drop?",
-            "Why isn't my traffic converting?",
-            "What needs to be optimized first?",
-            "How can I detach this problem?"
+            "If Nike were a person, which personality traits would best describe them?",
+            "How believable is this statement...?",
+            "What is the primary reason for your Netflix recommendation score?",
+            "What concerns you about a ring that monitors blood pressure?",
+            "Rank all claims from the most to the less convincing",
+            "Which one brand of athletic sneakers do you use most often?"
         ]
     };
 

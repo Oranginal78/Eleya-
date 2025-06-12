@@ -13,8 +13,8 @@ const CounterCard = ({ number, suffix, title, description, delay = 0, noAnimatio
                         setIsVisible(true);
                         // Start counting animation only if noAnimation is false
                         if (!noAnimation) {
-                            const duration = 2000; // 2 seconds
-                            const steps = 60;
+                            const duration = 1000; // 1 second
+                            const steps = 100;
                             const increment = number / steps;
                             let current = 0;
 

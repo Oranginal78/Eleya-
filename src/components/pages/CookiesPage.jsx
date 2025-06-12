@@ -30,19 +30,17 @@ const CookiesPage = () => {
                     <div className="max-w-4xl mx-auto">
                         <div className="bg-white rounded-xl p-8 shadow-sm border border-[#194471]/10 space-y-8">
 
-                            {/* Introduction */}
+                            {/* What Are Cookies */}
                             <div>
                                 <h2 className="text-2xl font-display font-semibold text-gray-800 mb-4">
                                     1. What Are Cookies?
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-4">
                                     <p>
-                                        Cookies are small text files that are stored on your computer or mobile device when you visit our website.
-                                        They help us provide you with a better experience by remembering your preferences and understanding how you use our site.
+                                        Cookies are small text files that are stored on your computer or mobile device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.
                                     </p>
                                     <p>
-                                        This Cookie Policy explains what cookies are, how we use them, the types of cookies we use,
-                                        and how you can control your cookie preferences.
+                                        This Cookie Policy explains what cookies are, how we use them, the types of cookies we use, and how you can control your cookie preferences.
                                     </p>
                                 </div>
                             </div>
@@ -71,41 +69,36 @@ const CookiesPage = () => {
                                     3. Types of Cookies We Use
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-6">
-
                                     <div>
                                         <h3 className="text-lg font-display font-medium text-gray-700 mb-2">Essential Cookies</h3>
                                         <p>
-                                            These cookies are necessary for the website to function properly. They enable core functionality
-                                            such as security, network management, and accessibility. You cannot opt-out of these cookies.
+                                            These cookies are necessary for the website to function properly. They enable core functionality such as security, network management, and accessibility. You cannot opt-out of these cookies.
                                         </p>
-                                        <p className="text-sm text-gray-500 mt-2">Examples: Session management, authentication, load balancing</p>
+                                        <p className="text-sm text-gray-500 mt-2"><strong>Examples:</strong> Session management, authentication, load balancing</p>
                                     </div>
 
                                     <div>
                                         <h3 className="text-lg font-display font-medium text-gray-700 mb-2">Performance Cookies</h3>
                                         <p>
-                                            These cookies collect information about how you use our website, which pages you visit most often,
-                                            and if you receive error messages. This data helps us improve our website's performance.
+                                            These cookies collect information about how you use our website, which pages you visit most often, and if you receive error messages. This data helps us improve our website's performance.
                                         </p>
-                                        <p className="text-sm text-gray-500 mt-2">Examples: Google Analytics, page load times, error tracking</p>
+                                        <p className="text-sm text-gray-500 mt-2"><strong>Examples:</strong> Google Analytics, page load times, error tracking</p>
                                     </div>
 
                                     <div>
                                         <h3 className="text-lg font-display font-medium text-gray-700 mb-2">Functional Cookies</h3>
                                         <p>
-                                            These cookies allow our website to remember choices you make and provide enhanced,
-                                            more personal features. They may also be used to provide services you have requested.
+                                            These cookies allow our website to remember choices you make and provide enhanced, more personal features. They may also be used to provide services you have requested.
                                         </p>
-                                        <p className="text-sm text-gray-500 mt-2">Examples: Language preferences, user interface settings, remembered login details</p>
+                                        <p className="text-sm text-gray-500 mt-2"><strong>Examples:</strong> Language preferences, user interface settings, remembered login details</p>
                                     </div>
 
                                     <div>
                                         <h3 className="text-lg font-display font-medium text-gray-700 mb-2">Marketing Cookies</h3>
                                         <p>
-                                            These cookies track your online activity to help advertisers deliver more relevant advertising
-                                            or to limit how many times you see an ad. These cookies can share information with other organizations.
+                                            These cookies track your online activity to help advertisers deliver more relevant advertising or to limit how many times you see an ad. These cookies can share information with other organizations.
                                         </p>
-                                        <p className="text-sm text-gray-500 mt-2">Examples: Social media tracking, advertising networks, retargeting</p>
+                                        <p className="text-sm text-gray-500 mt-2"><strong>Examples:</strong> Social media tracking, advertising networks, retargeting</p>
                                     </div>
                                 </div>
                             </div>
@@ -117,8 +110,7 @@ const CookiesPage = () => {
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-4">
                                     <p>
-                                        In addition to our own cookies, we may also use various third-party cookies to report
-                                        usage statistics, deliver advertisements, and provide enhanced functionality.
+                                        In addition to our own cookies, we may also use various third-party cookies to report usage statistics, deliver advertisements, and provide enhanced functionality.
                                     </p>
                                     <p>Third-party services we use include:</p>
                                     <ul className="list-disc pl-6 space-y-2">
@@ -142,8 +134,7 @@ const CookiesPage = () => {
                                         <li><strong>Persistent Cookies:</strong> Remain on your device for a set period or until you delete them</li>
                                     </ul>
                                     <p>
-                                        Most of our cookies are session cookies, with persistent cookies typically lasting
-                                        from 30 days to 2 years, depending on their purpose.
+                                        Most of our cookies are session cookies, with persistent cookies typically lasting from 30 days to 2 years, depending on their purpose.
                                     </p>
                                 </div>
                             </div>
@@ -154,15 +145,11 @@ const CookiesPage = () => {
                                     6. Managing Your Cookie Preferences
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-4">
-                                    <p>
-                                        You have several options for managing cookies:
-                                    </p>
+                                    <p>You have several options for managing cookies:</p>
 
                                     <div>
                                         <h3 className="text-lg font-display font-medium text-gray-700 mb-2">Browser Settings</h3>
-                                        <p>
-                                            Most web browsers allow you to control cookies through their settings. You can:
-                                        </p>
+                                        <p>Most web browsers allow you to control cookies through their settings. You can:</p>
                                         <ul className="list-disc pl-6 space-y-1 mt-2">
                                             <li>View what cookies are stored and delete them individually</li>
                                             <li>Block third-party cookies</li>
@@ -175,8 +162,7 @@ const CookiesPage = () => {
                                     <div>
                                         <h3 className="text-lg font-display font-medium text-gray-700 mb-2">Cookie Consent Banner</h3>
                                         <p>
-                                            When you first visit our website, you'll see a cookie consent banner where you can
-                                            choose which types of cookies you want to accept.
+                                            When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies you want to accept.
                                         </p>
                                     </div>
                                 </div>
@@ -188,18 +174,14 @@ const CookiesPage = () => {
                                     7. Impact of Disabling Cookies
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-4">
-                                    <p>
-                                        While you can disable cookies, doing so may affect your experience on our website:
-                                    </p>
+                                    <p>While you can disable cookies, doing so may affect your experience on our website:</p>
                                     <ul className="list-disc pl-6 space-y-2">
                                         <li>Some features may not work properly</li>
                                         <li>You may need to re-enter information frequently</li>
                                         <li>Personalized content and recommendations won't be available</li>
                                         <li>We won't be able to remember your preferences</li>
                                     </ul>
-                                    <p>
-                                        Essential cookies cannot be disabled as they are necessary for the website to function.
-                                    </p>
+                                    <p>Essential cookies cannot be disabled as they are necessary for the website to function.</p>
                                 </div>
                             </div>
 
@@ -209,34 +191,24 @@ const CookiesPage = () => {
                                     8. Contact Us
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-4">
-                                    <p>
-                                        If you have any questions about our use of cookies or this Cookie Policy,
-                                        please contact us:
-                                    </p>
+                                    <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us at:</p>
                                     <div className="bg-[#194471]/10 p-6 rounded-lg">
-                                        <p><strong>Email:</strong> privacy@eleya.com</p>
-                                        <p><strong>Address:</strong> ELEYA, Data Protection Office</p>
-                                        <p className="mt-2">
-                                            <strong>Data Protection Officer:</strong> dpo@eleya.com
-                                        </p>
+                                        <p>contact@eleya.eu</p>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Last Updated */}
+                            {/* Updates to This Policy */}
                             <div>
                                 <h2 className="text-2xl font-display font-semibold text-gray-800 mb-4">
                                     9. Updates to This Policy
                                 </h2>
                                 <div className="text-gray-600 font-sans space-y-4">
                                     <p>
-                                        We may update this Cookie Policy from time to time to reflect changes in our practices
-                                        or for legal and regulatory reasons. When we make changes, we will update the
-                                        "Last Updated" date at the bottom of this page.
+                                        We may update this Cookie Policy from time to time to reflect changes in our practices or for legal and regulatory reasons. When we make changes, we will update the "Last Updated" date at the bottom of this page.
                                     </p>
                                     <p>
-                                        We encourage you to review this Cookie Policy periodically to stay informed about
-                                        how we use cookies.
+                                        We encourage you to review this Cookie Policy periodically to stay informed about how we use cookies.
                                     </p>
                                     <div className="bg-gray-50 p-4 rounded-lg mt-6">
                                         <p className="text-sm text-gray-500">
@@ -245,6 +217,7 @@ const CookiesPage = () => {
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

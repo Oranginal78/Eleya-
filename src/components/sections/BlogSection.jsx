@@ -144,12 +144,12 @@ const BlogSection = () => {
             slug: "essential-metrics-business-track"
         },
         {
-            title: "How to Optimize Your Website Performance",
-            excerpt: "Learn practical strategies to improve your website's speed, user experience, and search engine rankings. Get actionable tips from industry experts.",
-            date: "Dec 10, 2024",
-            readTime: 6,
-            image: "/images/performance.jpg",
-            slug: "optimize-website-performance"
+            title: "Understanding Synthetic Data Reliability: A Complete Guide",
+            excerpt: "Discover how much data you need to produce reliable synthetic data, explore our model performance achievements, and understand the key terminology in the synthetic data landscape.",
+            date: "Dec 8, 2024",
+            readTime: 8,
+            image: "/images/illustr2.jpg",
+            slug: "synthetic-data-reliability"
         }
     ];
 

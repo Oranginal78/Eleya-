@@ -113,6 +113,7 @@ const BarChart = ({ data, title, question, isAnimated = false, delay = 0 }) => {
 
 const StackedBarChart = ({ data, title, question, delay = 0 }) => {
     const [isVisible, setIsVisible] = useState(false);
+    const [filterType, setFilterType] = useState('Age');
     const chartRef = useRef(null);
 
     useEffect(() => {
@@ -140,7 +141,15 @@ const StackedBarChart = ({ data, title, question, delay = 0 }) => {
         'Other': '#FFB366' // Orange
     };
 
-    const ageGroups = ['50-64', '65-74', '35-49', '25-34', '75+'];
+    // Couleurs pour les tranches d'âge (exemple, à adapter si besoin)
+    const ageGroupColors = {
+        '25-34': '#194471',
+        '35-49': '#A8E6CF',
+        '50-64': '#4FC3D7',
+        '65-74': '#6BCF7C',
+        '75+': '#FFB366'
+    };
+    const ageGroups = ['25-34', '35-49', '50-64', '65-74', '75+'];
 
     return (
         <div
@@ -193,7 +202,7 @@ const StackedBarChart = ({ data, title, question, delay = 0 }) => {
                                                 className="transition-all duration-1000 ease-out"
                                                 style={{
                                                     width: `${(value / total) * 100}%`,
-                                                    backgroundColor: colors[key] || '#E5E7EB',
+                                                    backgroundColor: filterType === 'Age' ? ageGroupColors[key] || '#E5E7EB' : colors[key] || '#E5E7EB',
                                                     transitionDelay: `${segmentIndex * 100}ms`
                                                 }}
                                             />
@@ -217,15 +226,25 @@ const StackedBarChart = ({ data, title, question, delay = 0 }) => {
 
             {/* Legend */}
             <div className="flex flex-wrap gap-4 mt-6 text-xs">
-                {Object.entries(colors).map(([key, color]) => (
-                    <div key={key} className="flex items-center gap-1">
-                        <div
-                            className="w-3 h-3 rounded-full"
-                            style={{ backgroundColor: color }}
-                        />
-                        <span className="text-gray-600">{key}</span>
-                    </div>
-                ))}
+                {filterType === 'Age'
+                    ? ageGroups.map((age) => (
+                        <div key={age} className="flex items-center gap-1">
+                            <div
+                                className="w-3 h-3 rounded-full"
+                                style={{ backgroundColor: ageGroupColors[age] }}
+                            />
+                            <span className="text-gray-600">{age}</span>
+                        </div>
+                    ))
+                    : Object.entries(colors).map(([key, color]) => (
+                        <div key={key} className="flex items-center gap-1">
+                            <div
+                                className="w-3 h-3 rounded-full"
+                                style={{ backgroundColor: color }}
+                            />
+                            <span className="text-gray-600">{key}</span>
+                        </div>
+                    ))}
             </div>
         </div>
     );
@@ -259,39 +278,46 @@ const StudyResultsSection = () => {
         { label: 'Below average', value: 8 }
     ];
 
-    // Data for second chart (stacked bar chart by age)
+    // Data for second chart (stacked bar chart par âge, stats inventées et couleurs visibles)
     const cooperationData = [
         {
             category: 'Likely cannot cooperate',
             values: {
-                'Likely cannot cooperate': 14,
-                'Likely can cooperate': 8,
-                'Not sure': 4,
-                'Definitely cannot cooperate': 2
+                '25-34': 3,
+                '35-49': 5,
+                '50-64': 9,
+                '65-74': 10,
+                '75+': 5
             }
         },
         {
             category: 'Likely can cooperate',
             values: {
-                'Likely cannot cooperate': 6,
-                'Likely can cooperate': 4,
-                'Not sure': 2,
-                'Other': 1
+                '25-34': 8,
+                '35-49': 7,
+                '50-64': 4,
+                '65-74': 2,
+                '75+': 1
             }
         },
         {
             category: 'Not sure',
             values: {
-                'Likely cannot cooperate': 3,
-                'Likely can cooperate': 2,
-                'Not sure': 1
+                '25-34': 2,
+                '35-49': 5,
+                '50-64': 2,
+                '65-74': 1,
+                '75+': 1
             }
         },
         {
             category: 'Definitely cannot cooperate',
             values: {
-                'Likely cannot cooperate': 3,
-                'Likely can cooperate': 2
+                '25-34': 1,
+                '35-49': 1,
+                '50-64': 2,
+                '65-74': 3,
+                '75+': 6
             }
         }
     ];

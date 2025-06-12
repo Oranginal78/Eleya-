@@ -277,63 +277,21 @@ const ConnectionLines = () => {
 };
 
 const ValueSection = () => {
-    const processSteps = [
-        {
-            icon: ChatBubbleLeftRightIcon,
-            title: "Entry gate",
-            description: "Hi, my name is Intelly. Is that anything that I can help you for?",
-            position: "top-left"
-        },
-        {
-            icon: CheckCircleIcon,
-            title: "Option 1",
-            description: "This the solution",
-            position: "top-right"
-        },
-        {
-            icon: ClipboardDocumentListIcon,
-            title: "Multiple choice",
-            description: "Option A, Option B, Other choice",
-            position: "bottom-left"
-        },
-        {
-            icon: UserGroupIcon,
-            title: "Option 2",
-            description: "Maybe you should do..",
-            position: "bottom-right"
-        }
-    ];
-
     return (
-        <section className="py-12 md:py-20" style={{
+        <section className="py-8 md:py-14" style={{
             backgroundColor: '#FFFBF7',
             backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.04) 1px, transparent 1px)',
             backgroundSize: '16px 16px md:24px md:24px'
         }}>
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Process Diagram */}
-                <div className="max-w-4xl md:max-w-6xl mx-auto">
-                    {/* Box container around the diagram */}
-                    <div className="bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-gray-200/60 shadow-lg p-6 md:p-8 lg:p-12">
-                        <div className="relative grid grid-cols-3 grid-rows-3 gap-4 md:gap-8 lg:gap-12 items-center justify-items-center min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
-                            {/* Connection Lines */}
-                            <ConnectionLines />
-
-                            {/* Central Hub */}
-                            <CentralHub delay={200} />
-
-                            {/* Process Steps */}
-                            {processSteps.map((step, index) => (
-                                <ProcessStep
-                                    key={index}
-                                    icon={step.icon}
-                                    title={step.title}
-                                    description={step.description}
-                                    position={step.position}
-                                    delay={300 + index * 150}
-                                />
-                            ))}
-                        </div>
+            <div className="container mx-auto px-2 sm:px-4 lg:px-8">
+                <div className="flex justify-center">
+                    <div className="bg-white rounded-2xl shadow-xl p-2 md:p-6 max-w-4xl w-full flex justify-center items-center">
+                        <img
+                            src="/images/shema EleyaTwin.png"
+                            alt="EleyaTwin schema"
+                            className="w-full max-w-3xl h-auto object-contain rounded-xl"
+                            style={{ minWidth: 0 }}
+                        />
                     </div>
                 </div>
             </div>
