@@ -80,10 +80,11 @@ const FiguresSection = () => {
     ];
 
     return (
-        <section className="py-16 md:py-20" style={{
+        <section className="py-20 md:py-24" style={{
             backgroundColor: '#FFFBF7',
             backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.04) 1px, transparent 1px)',
-            backgroundSize: '16px 16px md:24px md:24px'
+            backgroundSize: '16px 16px md:24px md:24px',
+            borderBottom: '4px solid #FCB072'
         }}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Figures Grid */}

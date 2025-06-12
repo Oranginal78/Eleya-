@@ -91,48 +91,35 @@ const UseCasesSection = () => {
     ];
 
     return (
-        <section className="relative py-20" style={{
-            backgroundColor: 'transparent'
+        <section className="relative py-12" style={{
+            backgroundColor: '#FFFDFB',
+            borderBottom: '4px solid #FCB072'
         }}>
-            {/* Dégradé de transition du haut */}
-            <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white/40 via-white/65 to-white/85 z-10"></div>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <div
+                    ref={titleRef}
+                    className={`text-center mb-16 transition-all duration-1000 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                        }`}
+                >
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-gray-800 mb-6">
+                        Use Cases
+                    </h2>
+                </div>
 
-            {/* Contenu principal avec fond semi-transparent */}
-            <div className="relative z-20" style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.85)',
-                backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.06) 1px, transparent 1px)',
-                backgroundSize: '20px 20px',
-                margin: '20px 0'
-            }}>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    {/* Header */}
-                    <div
-                        ref={titleRef}
-                        className={`text-center mb-16 transition-all duration-1000 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                            }`}
-                    >
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-gray-800 mb-6">
-                            Use Cases
-                        </h2>
-                    </div>
-
-                    {/* Use Cases Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {useCases.map((useCase, index) => (
-                            <UseCaseCard
-                                key={index}
-                                icon={useCase.icon}
-                                title={useCase.title}
-                                description={useCase.description}
-                                delay={index * 100}
-                            />
-                        ))}
-                    </div>
+                {/* Use Cases Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {useCases.map((useCase, index) => (
+                        <UseCaseCard
+                            key={index}
+                            icon={useCase.icon}
+                            title={useCase.title}
+                            description={useCase.description}
+                            delay={index * 100}
+                        />
+                    ))}
                 </div>
             </div>
-
-            {/* Dégradé de transition du bas */}
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/40 via-white/65 to-white/85 z-10"></div>
         </section>
     );
 };

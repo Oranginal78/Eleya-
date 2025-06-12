@@ -154,7 +154,9 @@ const BlogSection = () => {
     ];
 
     return (
-        <section className="py-20 bg-gray-25">
+        <section className="py-20" style={{
+            backgroundColor: '#FFFBF7'
+        }}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div

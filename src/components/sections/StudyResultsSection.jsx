@@ -324,59 +324,47 @@ const StudyResultsSection = () => {
 
     return (
         <section className="relative py-20" style={{
-            backgroundColor: 'transparent'
+            backgroundColor: '#FFF0E1',
+            backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.08) 1px, transparent 1px)',
+            backgroundSize: '24px 24px'
         }}>
-            {/* Dégradé de transition du haut */}
-            <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white/40 via-white/60 to-white/75 z-10"></div>
-
-            {/* Contenu principal avec fond semi-transparent */}
-            <div className="relative z-20" style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.06) 1px, transparent 1px)',
-                backgroundSize: '20px 20px',
-                margin: '20px 0'
-            }}>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    {/* Header */}
-                    <div
-                        ref={titleRef}
-                        className={`text-center mb-16 transition-all duration-1000 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                            }`}
-                    >
-                        <div className="flex items-center justify-center gap-3 mb-6">
-                            <div className="w-8 h-8 bg-[#194471] rounded-lg flex items-center justify-center">
-                                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                </svg>
-                            </div>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-gray-800">
-                                Study Results
-                            </h2>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <div
+                    ref={titleRef}
+                    className={`text-center mb-16 transition-all duration-1000 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                        }`}
+                >
+                    <div className="flex items-center justify-center gap-3 mb-6">
+                        <div className="w-8 h-8 bg-[#194471] rounded-lg flex items-center justify-center">
+                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
                         </div>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Real-time insights from our AI-powered survey platform
-                        </p>
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-gray-800">
+                            Study Results
+                        </h2>
                     </div>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Real-time insights from our AI-powered survey platform
+                    </p>
+                </div>
 
-                    {/* Charts Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <BarChart
-                            data={techAchievementsData}
-                            question="How does the U.S. compare to other wealth nations in Technological achievements?"
-                            isAnimated={true}
-                            delay={200}
-                        />
-                        <StackedBarChart
-                            data={cooperationData}
-                            question="Do you think the U.S. and China can cooperate on Resolving international conflicts?"
-                            delay={400}
-                        />
-                    </div>
+                {/* Charts Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <BarChart
+                        data={techAchievementsData}
+                        question="How does the U.S. compare to other wealth nations in Technological achievements?"
+                        isAnimated={true}
+                        delay={200}
+                    />
+                    <StackedBarChart
+                        data={cooperationData}
+                        question="Do you think the U.S. and China can cooperate on Resolving international conflicts?"
+                        delay={400}
+                    />
                 </div>
             </div>
-
-            {/* Dégradé de transition du bas */}
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/40 via-white/60 to-white/75 z-10"></div>
         </section>
     );
 };

@@ -278,20 +278,30 @@ const ConnectionLines = () => {
 
 const ValueSection = () => {
     return (
-        <section className="py-8 md:py-14" style={{
-            backgroundColor: '#FFFBF7',
-            backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.04) 1px, transparent 1px)',
-            backgroundSize: '16px 16px md:24px md:24px'
+        <section className="pt-12 pb-0" style={{
+            backgroundColor: '#FFF8ED'
         }}>
-            <div className="container mx-auto px-2 sm:px-4 lg:px-8">
-                <div className="flex justify-center">
-                    <div className="bg-white rounded-2xl shadow-xl p-2 md:p-6 max-w-4xl w-full flex justify-center items-center">
-                        <img
-                            src="/images/shema EleyaTwin.png"
-                            alt="EleyaTwin schema"
-                            className="w-full max-w-3xl h-auto object-contain rounded-xl"
-                            style={{ minWidth: 0 }}
-                        />
+            {/* Conteneur avec effet 3D moderne - toute largeur */}
+            <div
+                className="rounded-3xl py-16 px-8 md:px-12"
+                style={{
+                    backgroundColor: '#FFF0E1',
+                    backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.08) 1px, transparent 1px)',
+                    backgroundSize: '24px 24px',
+                    boxShadow: '0 -20px 40px -8px rgba(0, 0, 0, 0.25), 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                    transform: 'translateY(-4px)'
+                }}
+            >
+                <div className="container mx-auto px-2 sm:px-4 lg:px-8">
+                    <div className="flex justify-center">
+                        <div className="bg-white rounded-2xl shadow-xl p-2 md:p-6 max-w-4xl w-full flex justify-center items-center">
+                            <img
+                                src="/images/shema EleyaTwin.png"
+                                alt="EleyaTwin schema"
+                                className="w-full max-w-3xl h-auto object-contain rounded-xl"
+                                style={{ minWidth: 0 }}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const HeroSection = () => {
     return (
         <section className="relative min-h-screen overflow-hidden -mt-16" style={{
             backgroundColor: 'transparent',
-            backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.3) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.5) 1px, transparent 1px)',
             backgroundSize: '24px 24px'
         }}>
             {/* Background Images */}
@@ -19,9 +19,9 @@ const HeroSection = () => {
                 <img
                     src="https://framerusercontent.com/images/lysrb9oLsW8SXarkxi4Kp9N2FM.png"
                     alt="Background"
-                    className="w-full h-full object-cover opacity-60"
+                    className="w-full h-full object-cover opacity-75"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-200/30 via-orange-100/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/50 via-orange-300/40 to-transparent"></div>
             </div>
 
             {/* Light Flare Overlay */}
@@ -34,7 +34,7 @@ const HeroSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-16">
+            <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-0">
                 {/* Main Content */}
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Main Heading */}
@@ -70,7 +70,11 @@ const HeroSection = () => {
             </div>
 
             {/* Bottom Fade - jonction dégradée vers la section suivante */}
-            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white/40 via-orange-50/30 to-transparent z-30"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-80 z-30 pointer-events-none"
+                style={{
+                    background: 'linear-gradient(to bottom, transparent 0%, #FFF8ED 100%)'
+                }}
+            ></div>
         </section>
     );
 };

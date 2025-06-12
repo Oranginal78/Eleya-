@@ -45,7 +45,7 @@ const FutureAiPoweredAnalyticsPage = () => {
                     <img
                         src="/images/ai-analytics.jpg"
                         alt="AI-Powered Analytics"
-                        className="w-full h-64 lg:h-96 object-cover rounded-xl shadow-lg"
+                        className="w-full h-72 lg:h-96 object-cover rounded-xl shadow-lg mb-8"
                     />
                 </div>
             </div>
@@ -53,100 +53,65 @@ const FutureAiPoweredAnalyticsPage = () => {
             {/* Content */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
                 <div className="max-w-4xl">
-                    <div className="prose prose-lg prose-blue max-w-none">
-                        <h2>The AI Revolution in Analytics</h2>
+                    <div className="prose prose-lg max-w-none">
+                        <h2 className="text-2xl font-bold text-[#194471] mb-4">The AI Revolution in Analytics</h2>
+                        <div className="bg-blue-50 border-l-4 border-blue-300 p-4 rounded-xl mb-6">
+                            <p className="mb-2 font-semibold">Why is AI changing analytics?</p>
+                            <p>AI-powered analytics platforms can process vast amounts of data in real-time, identify patterns that humans might miss, and provide actionable insights automatically.</p>
+                        </div>
                         <p>
-                            Artificial Intelligence is fundamentally transforming how businesses approach data analysis.
-                            Gone are the days when analytics required extensive manual processing and interpretation.
-                            Today's AI-powered analytics platforms can process vast amounts of data in real-time,
-                            identify patterns that humans might miss, and provide actionable insights automatically.
+                            Gone are the days when analytics required extensive manual processing and interpretation. Today, AI is fundamentally transforming how businesses approach data analysis.
                         </p>
-
-                        <h2>Key Trends Shaping the Future</h2>
-
-                        <h3>1. Predictive Analytics at Scale</h3>
+                        <h2 className="text-2xl font-bold text-[#194471] mt-10 mb-4">Key Trends Shaping the Future</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div className="bg-gray-50 p-4 rounded-xl border">
+                                <b>Predictive Analytics at Scale</b>
+                                <p>Modern AI systems can analyze historical data patterns to predict future trends with unprecedented accuracy. This allows businesses to make proactive decisions and gain competitive advantages.</p>
+                            </div>
+                            <div className="bg-gray-50 p-4 rounded-xl border">
+                                <b>Real-Time Decision Making</b>
+                                <p>AI-powered analytics platforms now offer real-time processing, enabling businesses to respond to market changes, customer behavior, and operational issues as they happen.</p>
+                            </div>
+                            <div className="bg-gray-50 p-4 rounded-xl border">
+                                <b>Natural Language Processing</b>
+                                <p>Business users can now query their data using natural language, making advanced analytics accessible to non-technical team members.</p>
+                            </div>
+                        </div>
+                        <h2 className="text-2xl font-bold text-[#194471] mt-10 mb-4">Technologies Driving Change</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div className="bg-gray-50 p-4 rounded-xl border">
+                                <b>Machine Learning Algorithms</b>
+                                <p>Advanced ML algorithms are becoming more sophisticated, capable of handling complex data relationships and providing more accurate predictions. These algorithms continuously learn and improve from new data.</p>
+                            </div>
+                            <div className="bg-gray-50 p-4 rounded-xl border">
+                                <b>Cloud Computing Integration</b>
+                                <p>The combination of AI and cloud computing has democratized access to powerful analytics capabilities. Small and medium businesses can now leverage the same advanced tools as large enterprises.</p>
+                            </div>
+                        </div>
+                        <h2 className="text-2xl font-bold text-[#194471] mt-10 mb-4">Practical Applications</h2>
+                        <div className="bg-green-50 border-l-4 border-green-300 p-4 rounded-xl mb-6">
+                            <ul className="list-disc pl-6">
+                                <li><b>Customer Behavior Analysis:</b> Track and analyze customer interactions across multiple touchpoints to personalize offerings and improve retention.</li>
+                                <li><b>Operational Optimization:</b> Optimize operations by identifying inefficiencies and suggesting improvements based on data-driven insights.</li>
+                            </ul>
+                        </div>
+                        <h2 className="text-2xl font-bold text-[#194471] mt-10 mb-4">Looking Ahead</h2>
+                        <div className="bg-orange-50 border-l-4 border-orange-300 p-4 rounded-xl mb-6">
+                            <b>The future of AI-powered analytics is bright!</b> Emerging technologies like quantum computing and advanced neural networks promise even more powerful capabilities. As these technologies mature, analytics will become even more predictive, prescriptive, and integrated into everyday business operations.
+                        </div>
                         <p>
-                            Modern AI systems can analyze historical data patterns to predict future trends with
-                            unprecedented accuracy. This capability allows businesses to make proactive decisions
-                            rather than reactive ones, leading to better outcomes and competitive advantages.
-                        </p>
-
-                        <h3>2. Real-Time Decision Making</h3>
-                        <p>
-                            AI-powered analytics platforms now offer real-time processing capabilities, enabling
-                            businesses to respond to market changes, customer behavior, and operational issues
-                            as they happen. This immediacy is crucial in today's fast-paced business environment.
-                        </p>
-
-                        <h3>3. Natural Language Processing</h3>
-                        <p>
-                            The integration of NLP in analytics tools means that business users can now query
-                            their data using natural language, making advanced analytics accessible to
-                            non-technical team members across the organization.
-                        </p>
-
-                        <h2>Technologies Driving Change</h2>
-
-                        <h3>Machine Learning Algorithms</h3>
-                        <p>
-                            Advanced ML algorithms are becoming more sophisticated, capable of handling
-                            complex data relationships and providing more accurate predictions. These
-                            algorithms continuously learn and improve from new data, making them
-                            increasingly valuable over time.
-                        </p>
-
-                        <h3>Cloud Computing Integration</h3>
-                        <p>
-                            The combination of AI and cloud computing has democratized access to powerful
-                            analytics capabilities. Small and medium businesses can now leverage the same
-                            advanced tools that were once exclusive to large enterprises.
-                        </p>
-
-                        <h2>Practical Applications</h2>
-
-                        <h3>Customer Behavior Analysis</h3>
-                        <p>
-                            AI-powered analytics can track and analyze customer interactions across multiple
-                            touchpoints, providing insights into customer preferences, buying patterns, and
-                            potential churn risks. This information enables businesses to personalize their
-                            offerings and improve customer retention.
-                        </p>
-
-                        <h3>Operational Optimization</h3>
-                        <p>
-                            From supply chain management to resource allocation, AI analytics help businesses
-                            optimize their operations by identifying inefficiencies and suggesting improvements
-                            based on data-driven insights.
-                        </p>
-
-                        <h2>Looking Ahead</h2>
-                        <p>
-                            The future of AI-powered analytics is bright, with emerging technologies like
-                            quantum computing and advanced neural networks promising even more powerful
-                            capabilities. As these technologies mature, we can expect analytics to become
-                            even more predictive, prescriptive, and integrated into everyday business operations.
-                        </p>
-
-                        <p>
-                            Businesses that embrace AI-powered analytics today will be better positioned to
-                            compete in tomorrow's data-driven economy. The key is to start with clear objectives,
-                            invest in the right tools and talent, and maintain a culture of data-driven decision making.
+                            Businesses that embrace AI-powered analytics today will be better positioned to compete in tomorrow's data-driven economy. The key is to start with clear objectives, invest in the right tools and talent, and maintain a culture of data-driven decision making.
                         </p>
                     </div>
 
                     {/* CTA Section */}
-                    <div className="mt-12 p-8 bg-gray-50 rounded-xl">
-                        <h3 className="text-2xl font-display font-semibold text-gray-900 mb-4">
-                            Ready to Transform Your Analytics?
-                        </h3>
-                        <p className="text-gray-600 mb-6">
-                            Discover how EleyaTwin can help you leverage AI-powered analytics to drive your business forward.
-                        </p>
+                    <div className="mt-12 p-8 bg-gray-50 rounded-xl text-center">
                         <Link
-                            to="/demo"
+                            to="/blog"
                             className="inline-flex items-center gap-2 bg-[#194471] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#194471]/90 transition-colors duration-200"
                         >
-                            Get Started Today
+                            <ArrowLeftIcon className="w-5 h-5" />
+                            Back to all blog articles
                         </Link>
                     </div>
                 </div>

@@ -35,7 +35,9 @@ const ScrollingQuestionsSection = () => {
     };
 
     return (
-        <section className="py-16 overflow-hidden bg-gray-50">
+        <section className="py-16 overflow-hidden" style={{
+            backgroundColor: '#FFFBF7'
+        }}>
             <div className="space-y-6">
                 {/* Row 1 - Scrolls from left to right */}
                 <div className="relative">
