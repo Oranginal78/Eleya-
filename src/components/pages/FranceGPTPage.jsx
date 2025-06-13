@@ -13,13 +13,33 @@ const FranceGPTPage = () => {
 
     return (
         <BasePage>
-            {/* Hero Section - Fond orange doux plus prononcé */}
-            <section className="py-20" style={{
-                background: 'linear-gradient(180deg, rgba(255, 183, 107, 0.12) 0%, rgba(255, 154, 82, 0.08) 70%, rgba(250, 251, 252, 0.4) 100%)',
-                backgroundImage: 'radial-gradient(rgba(255, 183, 107, 0.1) 1px, transparent 1px)',
+            {/* Hero Section - Same background as landing page */}
+            <section className="relative min-h-screen overflow-hidden -mt-16" style={{
+                backgroundColor: 'transparent',
+                backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.5) 1px, transparent 1px)',
                 backgroundSize: '24px 24px'
             }}>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Background Images */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="https://framerusercontent.com/images/lysrb9oLsW8SXarkxi4Kp9N2FM.png"
+                        alt="Background"
+                        className="w-full h-full object-cover opacity-75"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-400/50 via-orange-300/40 to-transparent"></div>
+                </div>
+
+                {/* Light Flare Overlay */}
+                <div className="absolute inset-0 z-10">
+                    <img
+                        src="https://framerusercontent.com/images/xdIsSG8TXSulnA0CMVea6YY2Q.png"
+                        alt="Light Flare"
+                        className="w-full h-full object-cover mix-blend-overlay"
+                    />
+                </div>
+
+                {/* Content */}
+                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-0">
                     <div className={`text-center max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 bg-[#194471]/10 text-[#194471] px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -45,26 +65,31 @@ const FranceGPTPage = () => {
                             FranceGPT is the first AI-powered simulation of the French population, crafted to mirror
                             the diversity, habits, and decision-making of real people.
                         </p>
-
-                        {/* CTA Button */}
-                        <div className="flex justify-center">
-                            <Link
-                                to="/francegpt/experience"
-                                className="inline-flex items-center gap-3 bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                            >
-                                Try FranceGPT
-                                <ArrowRightIcon className="w-5 h-5" />
-                            </Link>
-                        </div>
                     </div>
                 </div>
+
+                {/* CTA Button - Separate layer */}
+                <div className="absolute bottom-20 left-0 right-0 z-40 flex justify-center">
+                    <Link
+                        to="/francegpt/experience"
+                        className="inline-flex items-center gap-3 bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    >
+                        Try FranceGPT
+                        <ArrowRightIcon className="w-5 h-5" />
+                    </Link>
+                </div>
+
+                {/* Bottom Fade - jonction dégradée vers la section suivante */}
+                <div className="absolute bottom-0 left-0 right-0 h-80 z-30 pointer-events-none"
+                    style={{
+                        background: 'linear-gradient(to bottom, transparent 0%, #FEF1E1 100%)'
+                    }}
+                ></div>
             </section>
 
-            {/* Photos Section - Transition fluide */}
+            {/* Photos Section - Clean background */}
             <section className="py-16" style={{
-                background: 'linear-gradient(180deg, rgba(250, 251, 252, 0.4) 0%, rgba(250, 251, 252, 1) 30%, rgba(250, 251, 252, 1) 70%, rgba(25, 68, 113, 0.02) 100%)',
-                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.03) 1px, transparent 1px)',
-                backgroundSize: '20px 20px'
+                backgroundColor: '#FEF1E1'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
@@ -96,11 +121,9 @@ const FranceGPTPage = () => {
                 </div>
             </section>
 
-            {/* Features Section - Gradient continu */}
+            {/* Features Section - Same clean background */}
             <section className="py-20" style={{
-                background: 'linear-gradient(180deg, rgba(25, 68, 113, 0.02) 0%, rgba(25, 68, 113, 0.04) 50%, rgba(25, 68, 113, 0.02) 100%)',
-                backgroundImage: 'radial-gradient(rgba(25, 68, 113, 0.06) 1px, transparent 1px)',
-                backgroundSize: '22px 22px'
+                backgroundColor: '#FEF1E1'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
@@ -154,21 +177,21 @@ const FranceGPTPage = () => {
                 </div>
             </section>
 
-            {/* CTA Section - Gradient de marque avec transition */}
+            {/* CTA Section - Same clean background */}
             <section className="py-20" style={{
-                background: 'linear-gradient(180deg, rgba(25, 68, 113, 0.02) 0%, rgba(25, 68, 113, 0.8) 30%, rgba(25, 68, 113, 1) 70%, rgba(37, 99, 235, 1) 100%)'
+                backgroundColor: '#FEF1E1'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto">
-                        <h2 className="text-3xl sm:text-4xl font-display font-semibold text-white mb-6">
+                        <h2 className="text-3xl sm:text-4xl font-display font-semibold text-gray-800 mb-6">
                             Ready to Meet Your Digital Twin?
                         </h2>
-                        <p className="text-xl text-white/90 mb-8 font-sans">
+                        <p className="text-xl text-gray-600 mb-8 font-sans">
                             Start your journey into the fascinating world of French population simulation.
                         </p>
                         <Link
                             to="/francegpt/experience"
-                            className="inline-flex items-center gap-3 bg-white text-[#194471] px-8 py-4 rounded-lg font-display font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg"
+                            className="relative z-10 inline-flex items-center gap-3 bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                         >
                             Try FranceGPT Now
                             <ArrowRightIcon className="w-5 h-5" />

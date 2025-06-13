@@ -55,18 +55,17 @@ const HeroSection = () => {
                             Conduct quantitative and qualitative surveys in real-time with our AI panelists, delivering actionable insights to stimulate growth.
                         </p>
                     </div>
-
-                    {/* CTA Button */}
-                    <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
-                        }`}>
-                        <Link
-                            to="/demo"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-[#194471] hover:bg-[#194471]/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg font-display"
-                        >
-                            Request a demo
-                        </Link>
-                    </div>
                 </div>
+            </div>
+
+            {/* CTA Button - Separate layer */}
+            <div className={`absolute bottom-70 left-0 right-0 z-40 flex justify-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+                <Link
+                    to="/demo"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-[#194471] hover:bg-[#194471]/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg font-display"
+                >
+                    Request a demo
+                </Link>
             </div>
 
             {/* Bottom Fade - jonction dégradée vers la section suivante */}

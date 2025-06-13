@@ -77,7 +77,7 @@ const FeatureCard = ({ icon: Icon, title, description, delay = 0, image }) => {
                     <h3 className="text-base font-display font-semibold text-white mb-3 h-8 flex items-start leading-tight">
                         {title}
                     </h3>
-                    <p className="text-white/90 leading-relaxed font-sans text-xs min-h-[80px] flex items-start">
+                    <p className="text-white/90 leading-relaxed font-sans text-sm min-h-[90px] flex items-start">
                         {description}
                     </p>
                 </div>
