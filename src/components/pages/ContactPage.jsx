@@ -36,20 +36,7 @@ const ContactPage = () => {
                             <h2 className="text-2xl font-display font-semibold text-gray-800 mb-6">
                                 Send us a message
                             </h2>
-                            <form
-                                action="https://formsubmit.co/william.burner675@gmail.com"
-                                method="POST"
-                                className="space-y-6"
-                            >
-                                {/* Honeypot */}
-                                <input type="text" name="_honey" style={{ display: 'none' }} />
-
-                                {/* Disable Captcha */}
-                                <input type="hidden" name="_captcha" value="false" />
-
-                                {/* Redirect after submit */}
-                                <input type="hidden" name="_next" value={window.location.href} />
-
+                            <form className="space-y-6">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-2 font-sans">
@@ -57,10 +44,8 @@ const ContactPage = () => {
                                         </label>
                                         <input
                                             type="text"
-                                            name="firstName"
                                             className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                             placeholder="John"
-                                            required
                                         />
                                     </div>
                                     <div>
@@ -69,10 +54,8 @@ const ContactPage = () => {
                                         </label>
                                         <input
                                             type="text"
-                                            name="lastName"
                                             className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                             placeholder="Doe"
-                                            required
                                         />
                                     </div>
                                 </div>
@@ -82,10 +65,8 @@ const ContactPage = () => {
                                     </label>
                                     <input
                                         type="email"
-                                        name="email"
                                         className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                         placeholder="john@example.com"
-                                        required
                                     />
                                 </div>
                                 <div>
@@ -94,7 +75,6 @@ const ContactPage = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        name="company"
                                         className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                         placeholder="Company Inc."
                                     />
@@ -104,11 +84,9 @@ const ContactPage = () => {
                                         Message
                                     </label>
                                     <textarea
-                                        name="message"
                                         rows={6}
                                         className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#194471] focus:border-transparent font-sans"
                                         placeholder="Tell us about your project..."
-                                        required
                                     ></textarea>
                                 </div>
                                 <button
